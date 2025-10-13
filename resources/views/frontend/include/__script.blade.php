@@ -41,7 +41,7 @@
     </script>
 @endif
 
-@notifyJs
+<!-- @notifyJs -->
 @yield('script')
 @stack('script')
 
@@ -63,4 +63,3 @@
 @if($fb)
     @include('frontend.plugin.fb',['data' => json_decode($fb->data, true)])
 @endif
-

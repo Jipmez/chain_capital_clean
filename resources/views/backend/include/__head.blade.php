@@ -8,16 +8,16 @@
     />
     <link rel="icon" href="{{ asset(setting('site_favicon','global')) }}" type="image/x-icon"/>
 
-    <link rel="stylesheet" href="{{ asset('global/css/fontawesome.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('backend/css/animate.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('backend/css/nice-select.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('global/css/datatables.min.css') }}"/>
-    @notifyCss
-    <link rel="stylesheet" href="{{ asset('backend/css/summernote-lite.min.css') }}"/>
+    <link rel="stylesheet" href="/global/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="/backend/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/backend/css/animate.css"/>
+    <link rel="stylesheet" href="/backend/css/nice-select.css"/>
+    <link rel="stylesheet" href="/global/css/datatables.min.css"/>
+    <!-- @notifyCss -->
+    <link rel="stylesheet" href="/backend/css/summernote-lite.min.css"/>
 
-    <link rel="stylesheet" href="{{asset('global/css/custom.css?var=2')}}"/>
-    <link rel="stylesheet" href="{{asset('backend/css/styles.css?var=2')}}"/>
+    <link rel="stylesheet" href="/global/css/custom.css?var=2"/>
+    <link rel="stylesheet" href="/backend/css/styles.css?var=2"/>
     @yield('style')
 
     <title>{{ setting('site_title', 'global') }} - @yield('title')</title>
