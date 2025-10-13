@@ -4,7 +4,7 @@
 
 
 <body class="{{ session()->get('site-color-mode') ?? 'dark-theme' }}">
-<x:notify-messages/>
+{{-- <x-notify-messages /> --}}
 <!--Header Area-->
 @include('frontend.include.__header')
 <!--/Header Area End-->
