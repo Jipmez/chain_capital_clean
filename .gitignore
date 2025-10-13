@@ -1,9 +1,4 @@
 /node_modules
-/public/build
-/assets/global/images
-/public/hot
-/public/storage
-/storage/*.key
 /vendor
 .env
 .env.backup
