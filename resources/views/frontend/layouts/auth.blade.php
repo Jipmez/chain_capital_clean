@@ -3,7 +3,8 @@
 <meta name="viewport" content="width=1400px, user-scalable=yes" />
 @include('frontend.include.__head')
 <body>
-<x:notify-messages/>
+{{-- <x-notify-messages /> --}}
+
 
 @yield('content')
 
