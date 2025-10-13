@@ -8,7 +8,7 @@
 
 <!--Auth Page-->
 <div class="admin-auth">
-    <x:notify-messages/>
+    {{-- <x-notify-messages /> --}}
     @yield('auth-content')
 </div>
 <!--/Auth Page-->
