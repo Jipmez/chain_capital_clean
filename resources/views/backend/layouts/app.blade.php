@@ -5,7 +5,7 @@
 <!--Full Layout-->
 <div class="layout">
 
-    <x:notify-messages/>
+    {{-- <x-notify-messages /> --}}
     <!--Header-->
     @include('backend.include.__header')
     <!--/Header-->
