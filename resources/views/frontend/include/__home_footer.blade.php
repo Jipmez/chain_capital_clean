@@ -33,11 +33,11 @@
                            </li>
                            <li>
                               <em class="contact-icon fas fa-phone"></em>
-                              <div class="contact-text"><span>+44 0123 4567</span></div>
+                              <div class="contact-text"><span>+4407719411524</span></div>
                            </li>
                            <li>
                               <em class="contact-icon fas fa-envelope"></em>
-                              <div class="contact-text"><span>info@company.com</span></div>
+                              <div class="contact-text"><span>support@chaincorecapital.com</span></div>
                            </li>
                            <li>
                               <em class="contact-icon fas fa-paper-plane"></em>

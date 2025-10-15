@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5 col-lg-8 col-md-12"><div class="auth-content" align="center">
                         <div align="center">
-                            <a href="{{ route('home')}}"><img src="https://brownsteincapital.com/account/public/resources/views/frontend/auth/Blue-Minimal-Corporate-Logo-300-x-150-px-1d.png" width="120px" align="center"/></a><hr>
+                            <a href="{{ route('home')}}"><img src="images/chain_logo.png" width="120px" align="center"/></a><hr>
                         </div>
                         <div class="title">
                             <h4>RESET PASSWORD</h4>
@@ -96,4 +96,3 @@
     </section>
     <!-- Login Section End -->
 @endsection
-

@@ -97,7 +97,8 @@
       <div class="container">
          <div class="text-center section-head wide-auto-sm">
             <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">Solutions</h2>
-            <p class="animated" data-animate="fadeInUp" data-delay=".2">We are creating modular software, apps blockchain based accusamus et eiusto odio dignimus qui blan ditiis praes entium volup tatun.</p>
+            <p class="animated" data-animate="fadeInUp" data-delay=".2">Accelerating positive change.
+Our purpose is to provide excellent investment performance to our clients through active management.</p>
          </div>
          <div class="nk-block nk-block-features-s3">
             <div class="row gutter-vr-40px justify-content-center">
@@ -154,7 +155,7 @@
                   <div class="nk-block-text">
                      <h6 class="title title-xs tc-primary animated" data-animate="fadeInUp" data-delay=".1">Ico Admin Dashboard</h6>
                      <h2 class="title animated" data-animate="fadeInUp" data-delay=".2">Introducing Complete Admin Dashboard</h2>
-                     <p class="animated" data-animate="fadeInUp" data-delay=".3">We designed the ICO Admin panel to mange back-end of ICO Token Sales. It’s allows to mange every thing such as KYC, Users, Transaction etc.</p>
+                     <p class="animated" data-animate="fadeInUp" data-delay=".3">We designed the ICO Admin panel to manage back-end of ICO Token Sales. It’s allows to mange every thing such as KYC, Users, Transaction etc.</p>
                      <ul class="list list-check animated" data-animate="fadeInUp" data-delay=".4">
                         <li>Fully manage KYC application process.</li>
                         <li>Online Payment Gateway with Offline Payment option.</li>
@@ -184,7 +185,7 @@
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".2" style="visibility: visible; animation-delay: 0.2s;">
                         <div class="team-photo">
-                            <img src="images/team/a.jpg" alt="team">
+                            <img src="images/team/1.jpeg" alt="team">
                             <a href="#team-popup-1" class="team-show content-popup"></a>
                         </div>
                         <h5 class="team-name title title-sm">Louis Baker</h5>
@@ -198,7 +199,7 @@
                         <div class="row align-items-start">
                             <div class="col-md-6">
                                 <div class="team-photo">
-                                    <img src="images/team/a.jpg" alt="team">
+                                    <img src="images/team/1.jpeg" alt="team">
                                 </div>
                             </div>
                             <!-- .col  -->
@@ -206,7 +207,7 @@
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Louis Baker</h3>
                                     <p class="team-position">CEO &amp; Lead Blockchain </p>
-                                    <p>acefinanceinv.com emphasis on finding a perfect trading strategy helped so much in making investment success as seamless as possible. I couldn’t
+                                    <p>chaincorecapital.com emphasis on finding a perfect trading strategy helped so much in making investment success as seamless as possible. I couldn’t
                                         be happier.</p>
                                     <div class="progress-list">
                                         <div class="progress-wrap">
@@ -238,11 +239,11 @@
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".2" style="visibility: visible; animation-delay: 0.2s;">
                         <div class="team-photo">
-                            <img src="images/team/b.jpg" alt="team">
+                            <img src="images/team/2.jpeg" alt="team">
                             <a href="#team-popup-2" class="team-show content-popup"></a>
                         </div>
                         <h5 class="team-name title title-sm">Jonathan Rios</h5>
-                        <p>My experience with acefinanceinv.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream. </p>
+                        <p>My experience with chaincorecapital.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream. </p>
                         <span class="team-position">CTO &amp; Software Engineer</span>
                     </div>
                     <!-- Start .team-popup  -->
@@ -251,7 +252,7 @@
                         <div class="row align-items-start">
                             <div class="col-md-6">
                                 <div class="team-photo">
-                                    <img src="images/team/b.jpg" alt="team">
+                                    <img src="images/team/2.jpeg" alt="team">
                                 </div>
                             </div>
                             <!-- .col  -->
@@ -259,7 +260,7 @@
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Jonathan Rios</h3>
                                     <p class="team-position">CTO &amp; Software Engineer</p>
-                                    <p>My experience with acefinanceinv.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream.</p>
+                                    <p>My experience with chaincorecapital.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream.</p>
                                 </div>
                             </div>
                             <!-- .col  -->
@@ -272,10 +273,10 @@
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="visibility: visible; animation-delay: 0.3s;">
                         <div class="team-photo">
-                            <img src="images/team/c.jpg" alt="team">
+                            <img src="images/team/4.jpeg" alt="team">
                             <a href="#team-popup-3" class="team-show content-popup"></a>
                         </div>
-                        <h5 class="team-name title title-sm">Jason Morales</h5>
+                        <h5 class="team-name title title-sm">Anna Morales</h5>
                         <p>They provided me with reliable information, trading tips, and orientation to their investment packages. I thank the account managers for their effort.</p>
                         <span class="team-position">Sr.Backend developer</span>
                     </div>
@@ -285,13 +286,13 @@
                         <div class="row align-items-start">
                             <div class="col-md-6">
                                 <div class="team-photo">
-                                    <img src="images/team/c.jpg" alt="team">
+                                    <img src="images/team/4.jpeg" alt="team">
                                 </div>
                             </div>
                             <!-- .col  -->
                             <div class="col-md-6">
                                 <div class="team-popup-info pl-md-3">
-                                    <h3 class="pt-4 team-name title title-lg">Jason Morales</h3>
+                                    <h3 class="pt-4 team-name title title-lg">Anna Morales</h3>
                                     <p class="team-position">Sr.Backend developer</p>
                                     <p>They provided me with reliable information, trading tips, and orientation to their investment packages. I thank the account managers for their effort.</p>
                                 </div>
@@ -306,10 +307,10 @@
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".4" style="visibility: visible; animation-delay: 0.4s;">
                         <div class="team-photo">
-                            <img src="images/team/d.jpg" alt="team">
+                            <img src="images/team/6.jpeg" alt="team">
                             <a href="#team-popup-4" class="team-show content-popup"></a>
                         </div>
-                        <h5 class="team-name title title-sm">Joseph Jordan</h5>
+                        <h5 class="team-name title title-sm">Jesica Jordan</h5>
                         <p>Always supportive and realistic, they gave me the confidence I needed to be where I am today. Simple but generous gestures, like setting up a trading account. </p>
                         <span class="team-position">Software Engineer</span>
                     </div>
@@ -319,13 +320,13 @@
                         <div class="row align-items-start">
                             <div class="col-md-6">
                                 <div class="team-photo">
-                                    <img src="images/team/d.jpg" alt="team">
+                                    <img src="images/team/6.jpeg" alt="team">
                                 </div>
                             </div>
                             <!-- .col  -->
                             <div class="col-md-6">
                                 <div class="team-popup-info pl-md-3">
-                                    <h3 class="pt-4 team-name title title-lg">Joseph Jordan</h3>
+                                    <h3 class="pt-4 team-name title title-lg">Jesica Jordan</h3>
                                     <p class="team-position">Software Engineer</p>
                                     <p>Always supportive and realistic, they gave me the confidence I needed to be where I am today. Simple but generous gestures, like setting up a trading account.</p>
                                 </div>
