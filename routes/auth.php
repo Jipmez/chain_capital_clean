@@ -12,7 +12,6 @@ use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\ForgetPasswordController;
 use Illuminate\Support\Facades\Route;
 
-
 //================================ User Auth Section ================================
 
 Route::middleware('guest')->group(function () {
@@ -72,5 +71,3 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('reset-password/{token}', [ForgetPasswordController::class, 'showResetPasswordForm'])->name('reset.password.now');
     Route::post('reset-password', [ForgetPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.submit');
 });
-
-

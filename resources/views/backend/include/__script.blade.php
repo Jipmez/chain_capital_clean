@@ -14,6 +14,6 @@
 <script src="/backend/js/main.js?var=5"></script>
 
 <script src="/global/js/custom.js?var=5"></script>
-<!-- @notifyJs -->
+@notifyJs
 @yield('script')
 @stack('single-script')

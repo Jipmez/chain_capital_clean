@@ -52,6 +52,11 @@ Route::get('/test-mail', function () {
     return 'Mail sent';
 });
 
+Route::get('/test-notify', function () {
+    notify()->success('It works!', 'Laravel Notify v2.7');
+    return view('welcome');
+});
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::post('subscriber', [HomeController::class, 'subscribeNow'])->name('subscriber');
 

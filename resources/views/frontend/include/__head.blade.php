@@ -7,21 +7,21 @@
     <link rel="shortcut icon" href="{{ asset(setting('site_favicon','global')) }}" type="image/x-icon"/>
 
     <link rel="icon" href="{{ asset(setting('site_favicon','global')) }}" type="image/x-icon"/>
-    <link rel="stylesheet" href="global/css/fontawesome.min.css"/>
-    <link rel="stylesheet" href="frontend/css/vendor/bootstrap.min.css"/>
-    <link rel="stylesheet" href="frontend/css/animate.css"/>
-    <link rel="stylesheet" href="frontend/css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="frontend/css/nice-select.css"/>
-    <link rel="stylesheet" href="global/css/datatables.min.css"/>
+    <link rel="stylesheet" href="/global/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="/frontend/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/frontend/css/animate.css"/>
+    <link rel="stylesheet" href="/frontend/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="/frontend/css/nice-select.css"/>
+    <link rel="stylesheet" href="/global/css/datatables.min.css"/>
     @stack('style')
     @notifyCss
     @yield('style')
-    <link rel="stylesheet" href="global/css/custom.css"/>
-    <link rel="stylesheet" href="frontend/css/magnific-popup.css"/>
+    <link rel="stylesheet" href="/global/css/custom.css"/>
+    <link rel="stylesheet" href="/frontend/css/magnific-popup.css"/>
     @if(setting('site_animation','permission'))
-        <link rel="stylesheet" href="frontend/css/aos.css"/>
+        <link rel="stylesheet" href="/frontend/css/aos.css"/>
     @endif
-    <link rel="stylesheet" href="frontend/css/styles.css?var=2.1"/>
+    <link rel="stylesheet" href="/frontend/css/styles.css?var=2.1"/>
 
     <!-- <style>
         {{ \App\Models\CustomCss::first()->css }}

@@ -2,7 +2,7 @@
 <html lang="en">
 @include('frontend.include.__head')
 <body class="{{ session()->get('site-color-mode') ?? 'dark-theme' }}">
-<!-- <x:notify-messages/> -->
+<x-notify::notify />
 <!--Full Layout-->
 <div class="panel-layout">
     <!--Header-->

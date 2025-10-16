@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/backend/css/animate.css"/>
     <link rel="stylesheet" href="/backend/css/nice-select.css"/>
     <link rel="stylesheet" href="/global/css/datatables.min.css"/>
-    <!-- @notifyCss -->
+    @notifyCss
     <link rel="stylesheet" href="/backend/css/summernote-lite.min.css"/>
 
     <link rel="stylesheet" href="/global/css/custom.css?var=2"/>

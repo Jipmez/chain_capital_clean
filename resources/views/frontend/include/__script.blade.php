@@ -41,7 +41,7 @@
     </script>
 @endif
 
-<!-- @notifyJs -->
+@notifyJs
 @yield('script')
 @stack('script')
 
