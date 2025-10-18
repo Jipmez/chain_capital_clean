@@ -19,7 +19,7 @@
                                         <th>{{ __('Icon') }}</th>
                                         <th>{{ __('Plan') }}</th>
                                         <th>{{ __('ROI') }}</th>
-                                        <th>{{ __('Profit') }}</th>
+                                        <!-- <th>{{ __('Profit') }}</th> -->
                                         <th>{{ __('Duration Left') }}</th>
                                         <th>{{ __('Capital Back') }}</th>
                                         <th>{{ __('Timeline') }}</th>
@@ -51,7 +51,7 @@
                     {data: 'icon', name: 'icon'},
                     {data: 'schema', name: 'schema'},
                     {data: 'rio', name: 'rio'},
-                    {data: 'profit', name: 'profit'},
+                   // {data: 'profit', name: 'profit'},
                     {data: 'period_remaining', name: 'period_remaining'},
                     {data: 'capital_back', name: 'capital_back'},
                     {data: 'next_profit_time', name: 'next_profit_time'},
