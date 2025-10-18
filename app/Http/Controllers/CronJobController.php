@@ -15,6 +15,7 @@ use App\Models\Transaction;
 use App\Models\User;
 use App\Traits\MailSendTrait;
 use Carbon\Carbon;
+use Log;
 use Txn;
 
 class CronJobController extends Controller
@@ -25,6 +26,7 @@ class CronJobController extends Controller
      */
     public function investmentCronJob()
     {
+        Log::info('Investment Cron Job Start(investmentCronJob)');
         $ongoingInvestment = Invest::where('status', InvestStatus::Ongoing)->where('next_profit_time', '<=', Carbon::now()->format('Y-m-d H:i:s'))->cursor();
 
         foreach ($ongoingInvestment as $invest) {
