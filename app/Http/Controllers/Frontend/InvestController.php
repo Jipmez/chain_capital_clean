@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend;
 
 use App\Enums\InvestStatus;
@@ -14,16 +13,10 @@ use App\Traits\ImageUpload;
 use App\Traits\MailSendTrait;
 use Auth;
 use Carbon\Carbon;
-use charlesassets\LaravelPerfectMoney\PerfectMoney;
-use Crypt;
 use DataTables;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Mollie\Laravel\Facades\Mollie;
-use Session;
-use Shakurov\Coinbase\Facades\Coinbase;
 use Txn;
-use Unicodeveloper\Paystack\Facades\Paystack;
 
 class InvestController extends GatewayController
 {
@@ -32,11 +25,10 @@ class InvestController extends GatewayController
     public function investNow(Request $request)
     {
 
-
         $validator = Validator::make($request->all(), [
-            'schema_id' => 'required',
+            'schema_id'     => 'required',
             'invest_amount' => 'regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
-            'wallet' => 'in:main,profit,gateway',
+            'wallet'        => 'in:main,profit,gateway',
         ]);
 
         if ($validator->fails()) {
@@ -46,7 +38,7 @@ class InvestController extends GatewayController
 
         $input = $request->all();
 
-        $user = Auth::user();
+        $user   = Auth::user();
         $schema = Schema::with('schedule')->find($input['schema_id']);
 
         $investAmount = $input['invest_amount'];
@@ -62,28 +54,27 @@ class InvestController extends GatewayController
 
         //invalid Amount
         if (($schema->type == 'range' && ($schema->min_amount > $investAmount || $schema->max_amount < $investAmount)) ||
-            ($schema->type == 'fixed' && $schema->fixed_amount <> $investAmount)) {
+            ($schema->type == 'fixed' && $schema->fixed_amount != $investAmount)) {
             notify()->error('Invalid Amount', 'Error');
             return redirect()->route('user.schema.preview', $schema->id);
         }
 
-
-        $periodHours = $schema->schedule->time;
+        $periodHours    = $schema->schedule->time;
         $nextProfitTime = Carbon::now()->addHour($periodHours);
-        $siteName = setting('site_title', 'global');
-        $data = [
-            'user_id' => $user->id,
-            'schema_id' => $schema->id,
-            'invest_amount' => $investAmount,
+        $siteName       = setting('site_title', 'global');
+        $data           = [
+            'user_id'          => $user->id,
+            'schema_id'        => $schema->id,
+            'invest_amount'    => $investAmount,
             'next_profit_time' => $nextProfitTime,
-            'capital_back' => $schema->capital_back,
-            'interest' => $schema->return_interest,
-            'interest_type' => $schema->interest_type,
-            'return_type' => $schema->return_type,
+            'capital_back'     => $schema->capital_back,
+            'interest'         => $schema->return_interest,
+            'interest_type'    => $schema->interest_type,
+            'return_type'      => $schema->return_type,
             'number_of_period' => $schema->number_of_period,
-            'period_hours' => $periodHours,
-            'wallet' => $input['wallet'],
-            'status' => InvestStatus::Ongoing,
+            'period_hours'     => $periodHours,
+            'wallet'           => $input['wallet'],
+            'status'           => InvestStatus::Ongoing,
         ];
 
         if ($input['wallet'] == 'main') {
@@ -95,18 +86,15 @@ class InvestController extends GatewayController
 
             $gatewayInfo = Gateway::code($input['gateway_code'])->first();
 
-            $charge = $gatewayInfo->charge_type == 'percentage' ? (($gatewayInfo->charge / 100) * $investAmount) : $gatewayInfo->charge;
-            $finalAmount = (double)$investAmount + (double)$charge;
-            $payAmount = $finalAmount * $gatewayInfo->rate;
+            $charge      = $gatewayInfo->charge_type == 'percentage' ? (($gatewayInfo->charge / 100) * $investAmount) : $gatewayInfo->charge;
+            $finalAmount = (double) $investAmount + (double) $charge;
+            $payAmount   = $finalAmount * $gatewayInfo->rate;
             $payCurrency = $gatewayInfo->currency;
-
 
             $manualData = null;
             if (isset($input['manual_data'])) {
 
-
                 $manualData = $input['manual_data'];
-
 
                 foreach ($manualData as $key => $value) {
 
@@ -117,7 +105,7 @@ class InvestController extends GatewayController
 
             }
 
-            $txnInfo = Txn::new($investAmount, $charge, $finalAmount, $gatewayInfo->name, $schema->name . ' Invested', TxnType::Investment, TxnStatus::Pending, $payCurrency, $payAmount, $user->id, null, 'user', $manualData ?? []);
+            $txnInfo = Txn::new ($investAmount, $charge, $finalAmount, $gatewayInfo->name, $schema->name . ' Invested', TxnType::Investment, TxnStatus::Pending, $payCurrency, $payAmount, $user->id, null, 'user', $manualData ?? []);
 
             $data = array_merge($data, ['status' => InvestStatus::Pending, 'transaction_id' => $txnInfo->id]);
 
@@ -127,22 +115,22 @@ class InvestController extends GatewayController
 
         }
 
-        $tnxInfo = Txn::new($input['invest_amount'], 0, $input['invest_amount'], 'system', $schema->name . ' Plan Invested', TxnType::Investment, TxnStatus::Success, null, null, $user->id);
-        $data = array_merge($data, ['transaction_id' => $tnxInfo->id]);
+        $tnxInfo = Txn::new ($input['invest_amount'], 0, $input['invest_amount'], 'system', $schema->name . ' Plan Invested', TxnType::Investment, TxnStatus::Success, null, null, $user->id);
+        $data    = array_merge($data, ['transaction_id' => $tnxInfo->id]);
         Invest::create($data);
 
-        if (setting('site_referral','global') == 'level' && setting('investment_level')){
-            $level = LevelReferral::where('type','investment')->max('the_order')+1;
-            creditReferralBonus($user,'investment',$input['invest_amount'],$level);
+        if (setting('site_referral', 'global') == 'level' && setting('investment_level')) {
+            $level = LevelReferral::where('type', 'investment')->max('the_order') + 1;
+            creditReferralBonus($user, 'investment', $input['invest_amount'], $level);
         }
 
         $shortcodes = [
-            '[[full_name]]' => $tnxInfo->user->full_name,
-            '[[txn]]' => $tnxInfo->tnx,
-            '[[plan_name]]' => $tnxInfo->invest->schema->name,
+            '[[full_name]]'     => $tnxInfo->user->full_name,
+            '[[txn]]'           => $tnxInfo->tnx,
+            '[[plan_name]]'     => $tnxInfo->invest->schema->name,
             '[[invest_amount]]' => $tnxInfo->amount . setting('site_currency', 'global'),
-            '[[site_title]]' => setting('site_title', 'global'),
-            '[[site_url]]' => route('home'),
+            '[[site_title]]'    => setting('site_title', 'global'),
+            '[[site_url]]'      => route('home'),
         ];
 
         $this->mailSendWithTemplate($tnxInfo->user->email, 'user_investment', $shortcodes);
@@ -151,11 +139,8 @@ class InvestController extends GatewayController
         return redirect()->route('user.invest-logs');
     }
 
-
-
     public function investLogs(Request $request)
     {
-
 
         if ($request->ajax()) {
 
@@ -165,9 +150,9 @@ class InvestController extends GatewayController
                 ->addColumn('icon', 'frontend.user.include.__invest_icon')
                 ->addColumn('schema', 'frontend.user.include.__invest_schema')
                 ->addColumn('rio', 'frontend.user.include.__invest_rio')
-                ->addColumn('profit', 'frontend.user.include.__invest_profit')
-                ->addColumn('period_remaining', function ($raw){
-                    if ($raw->return_type != 'period'){
+            // ->addColumn('profit', 'frontend.user.include.__invest_profit')
+                ->addColumn('period_remaining', function ($raw) {
+                    if ($raw->return_type != 'period') {
                         return 'Unlimited';
                     }
                     return $raw->number_of_period . ($raw->number_of_period < 2 ? ' Time' : '');
