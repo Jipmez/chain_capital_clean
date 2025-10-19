@@ -98,7 +98,7 @@
          <div class="text-center section-head wide-auto-sm">
             <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">Solutions</h2>
             <p class="animated" data-animate="fadeInUp" data-delay=".2">Accelerating positive change.
-Our purpose is to provide excellent investment performance to our clients through active management.</p>
+            Our purpose is to provide excellent investment performance to our clients through active management.</p>
          </div>
          <div class="nk-block nk-block-features-s3">
             <div class="row gutter-vr-40px justify-content-center">
@@ -142,6 +142,36 @@ Our purpose is to provide excellent investment performance to our clients throug
          </div>
       </div>
    </section>
+
+  <section class="section bg-light section-document" id="documents" >
+   <div class="container">
+      <!-- <div class="text-center section-head wide-auto">
+         <h2 class="title animated fadeInUp" data-animate="fadeInUp" data-delay=".1" style="visibility: visible; animation-delay: 0.1s;">ICOX Tokens</h2>
+         <p class="animated fadeInUp" data-animate="fadeInUp" data-delay=".2" style="visibility: visible; animation-delay: 0.2s;">Our Tokens with a realworld use case created on the blockchain network.</p>
+      </div> -->
+      <div class="nk-block nk-block-document">
+         <div class="row justify-content-center">
+            <div class="col-lg-10">
+               <div class="card card-lg animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);">
+                  <div class="row align-items-center">
+                     <div class="col-md-6">
+                        <div class="px-4 pb-4 nk-block-img pb-md-0"><img src="images/cert.jpeg" alt="doc"></div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="nk-block-text">
+                           <h4 class="text-white title title-md">Read the Whitepaper</h4>
+                           <p class="text-white">Our main goal is to provide added value by developing affordable, custom-made financial services for investors worldwide. By combining technology and financial knowledge, acefinanceinv.com creates high-quality and cost-effective financial services for everyone.</p>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
    <section class="section tc-light bg-theme-grad" id="admin-intro">
       <div class="container">
          <div class="nk-block nk-block-text-wrap">
@@ -342,5 +372,7 @@ Our purpose is to provide excellent investment performance to our clients throug
         </div>
     </div>
     </section>
+
+
 </main>
 @endsection
