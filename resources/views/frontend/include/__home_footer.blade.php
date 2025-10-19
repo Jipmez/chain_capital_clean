@@ -110,7 +110,9 @@
                </div>
                <div class="col-lg-6 order-lg-first">
                   <div class="wgs wgs-text animated fadeInUp" data-animate="fadeInUp" data-delay=".1" style="visibility: visible; animation-delay: 0.1s;">
+                    <div id="google_translate_element"></div>
                      <div class="wgs-body">
+
                         <a href="./" class="wgs-logo"><img src="images/chain_logo.png" style="width: 150px; height: 150px;" alt="logo"></a>
                         <p>Copyright © 2024 ChainCore Capital. <br>ABN: 2018AD947. All rights reserved. </p>
 

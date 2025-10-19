@@ -45,20 +45,6 @@
                </div>
             </div>
          </div>
-
-<br>
-<br>
-         <div class="col-md-12 col-lg-12">
-                      <h2>Chaincore Capital LTD</h2><hr>
-                    <div class="about-img-wrap">
-                       <!-- <img src="img/3.jpg" alt="video" class="rounded shadow-sm img-fluid">-->
-                        <br>
-                        <center>
-                       <video width="100%" height="230" src="https://acefinanceinv.com/video1.mp4" title="nectar-funds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" controls=""></video>
-                      <!--  <iframe width="100%" height="461" src="https://www.youtube.com/embed/UgG6taKOpUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                        </center>
-                    </div>
-                </div>
       </div>
    </section>
    <section class="section section-problem bg-light" id="problem">
