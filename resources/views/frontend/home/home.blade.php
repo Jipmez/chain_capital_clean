@@ -160,7 +160,7 @@
                      <div class="col-md-6">
                         <div class="nk-block-text">
                            <h4 class="text-white title title-md">Read the Whitepaper</h4>
-                           <p class="text-white">Our main goal is to provide added value by developing affordable, custom-made financial services for investors worldwide. By combining technology and financial knowledge, acefinanceinv.com creates high-quality and cost-effective financial services for everyone.</p>
+                           <p class="text-white">Our main goal is to provide added value by developing affordable, custom-made financial services for investors worldwide. By combining technology and financial knowledge, chaincorecapital.com creates high-quality and cost-effective financial services for everyone.</p>
 
                         </div>
                      </div>
