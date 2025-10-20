@@ -10,7 +10,6 @@ use App\Models\Ranking;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Rules\Recaptcha;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -71,7 +70,7 @@ class RegisteredUserController extends Controller
             $user->increment('profit_balance', $rank->bonus);
         }
 
-        event(new Registered($user));
+        // event(new Registered($user));
 
         event(new UserReferred(request()->cookie('ref'), $user));
 
