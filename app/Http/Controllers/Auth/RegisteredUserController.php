@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Enums\TxnStatus;
@@ -37,49 +36,49 @@ class RegisteredUserController extends Controller
     {
 
         $request->validate([
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
-            'country' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'first_name'           => ['required', 'string', 'max:255'],
+            'last_name'            => ['required', 'string', 'max:255'],
+            'username'             => ['required', 'string', 'max:255', 'unique:users'],
+            'country'              => ['required', 'string', 'max:255'],
+            'phone'                => ['required', 'string', 'max:255'],
+            'email'                => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password'             => ['required', 'confirmed', Rules\Password::defaults()],
             'g-recaptcha-response' => Rule::requiredIf(plugin_active('Google reCaptcha')), new Recaptcha(),
-            'i_agree' => ['required'],
+            'i_agree'              => ['required'],
         ]);
 
         $input = $request->all();
 
-        $phone = explode(':', $input['country'])[1] . ' ' . $input['phone'];
+        $phone   = explode(':', $input['country'])[1] . ' ' . $input['phone'];
         $country = explode(':', $input['country'])[0];
-
 
         $rank = Ranking::find(1);
 
-
         $user = User::create([
             'ranking_id' => $rank->id,
-            'rankings' => json_encode([$rank->id]),
+            'rankings'   => json_encode([$rank->id]),
             'first_name' => $input['first_name'],
-            'last_name' => $input['last_name'],
-            'username' => $input['username'],
-            'country' => $country,
-            'phone' => $phone,
-            'email' => $input['email'],
-            'password' => Hash::make($input['password']),
+            'last_name'  => $input['last_name'],
+            'username'   => $input['username'],
+            'country'    => $country,
+            'phone'      => $phone,
+            'email'      => $input['email'],
+            'password'   => Hash::make($input['password']),
         ]);
 
         if ($rank->bonus > 0) {
-            Txn::new($rank->bonus, 0, $rank->bonus, 'system', 'Ranking Bonus From ' . $rank->ranking, TxnType::Bonus, TxnStatus::Success, null, null, $user->id);
+            Txn::new ($rank->bonus, 0, $rank->bonus, 'system', 'Ranking Bonus From ' . $rank->ranking, TxnType::Bonus, TxnStatus::Success, null, null, $user->id);
             $user->increment('profit_balance', $rank->bonus);
         }
 
+        event(new Registered($user));
+
         event(new UserReferred(request()->cookie('ref'), $user));
 
-        if (setting('referral_signup_bonus', 'permission') && (double)setting('signup_bonus', 'fee') > 0) {
-            $signupBonus = (double)setting('signup_bonus', 'fee');
+        if (setting('referral_signup_bonus', 'permission') && (double) setting('signup_bonus', 'fee') > 0) {
+            $signupBonus = (double) setting('signup_bonus', 'fee');
             $user->increment('profit_balance', $signupBonus);
-            Txn::new($signupBonus, 0, $signupBonus, 'system', 'Signup Bonus', TxnType::SignupBonus, TxnStatus::Success, null, null, $user->id);
+            Txn::new ($signupBonus, 0, $signupBonus, 'system', 'Signup Bonus', TxnType::SignupBonus, TxnStatus::Success, null, null, $user->id);
             Session::put('signup_bonus', $signupBonus);
         }
         \Cookie::forget('ref');
@@ -95,14 +94,14 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        if (!setting('account_creation', 'permission')) {
+        if (! setting('account_creation', 'permission')) {
             abort('403', 'User registration is closed now');
         }
         $page = Page::where('code', 'registration')->first();
         $data = json_decode($page->data, true);
 
         $googleReCaptcha = plugin_active('Google reCaptcha');
-        $location = getLocation();
+        $location        = getLocation();
         return view('frontend.auth.register', compact('location', 'googleReCaptcha', 'data'));
     }
 }
