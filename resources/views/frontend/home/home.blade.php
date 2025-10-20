@@ -155,13 +155,13 @@
                <div class="card card-lg animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);">
                   <div class="row align-items-center">
                      <div class="col-md-6">
-                        <div class="px-4 pb-4 nk-block-img pb-md-0"><img src="images/cert.jpeg" alt="doc"></div>
+                        <div class="px-4 pb-4 nk-block-img pb-md-0"><img src="images/doc-a.png" alt="doc"></div>
                      </div>
                      <div class="col-md-6">
                         <div class="nk-block-text">
                            <h4 class="text-white title title-md">Read the Whitepaper</h4>
                            <p class="text-white">Our main goal is to provide added value by developing affordable, custom-made financial services for investors worldwide. By combining technology and financial knowledge, chaincorecapital.com creates high-quality and cost-effective financial services for everyone.</p>
-
+                          <ul class="btn-grp gutter-30px gutter-vr-20px"><li><a href="images/cert.pdf" target="_blank" class="btn btn-grad">Download WHite paper</a></li></ul>
                         </div>
                      </div>
                   </div>
