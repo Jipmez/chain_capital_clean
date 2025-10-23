@@ -15,11 +15,11 @@
         <div class="login-content">
             <div class="auth-content" align="center">
                         <div align="center">
-                            <a href="https://aspirecapitalhub.com/account"><img src="https://aspirecapitalhub.maxprofitex.com/wp-content/uploads/2023/07/Aspirecapitalhub-d.png" width="120px" align="center"/></a><hr>
+                            <a href="{{ route('home')}}"><img src="/images/chain_logo.png" width="120px" align="center"/></a><hr>
                         </div>
                         <div class="title">
                             <h4>WELCOME BACK! SIGN IN</h4></div>
-                        
+
             <div class="auth-body" align="left">
 
                 <form action="{{ route('admin.login') }}" method="post">
@@ -47,7 +47,7 @@
                     <div class="single-box">
                         <button class="site-btn primary-btn" type="submit">{{ __('Admin Login') }}</button>
                         <a href="{{route('admin.forget.password.now')}}"
-                           class="link mt-2">{{ __('Forget Password?') }}</a>
+                           class="mt-2 link">{{ __('Forget Password?') }}</a>
                     </div>
                 </form>
 
