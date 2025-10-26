@@ -20,7 +20,7 @@
 .ex:hover {background:#95bdfc;color:white;border:solid 1px #fff;border-radius:5px;padding:10px 15px}
 </style>
 
-        <hr><a href="{{ route('wallet-exchange') }}" class="user-sidebar-btn" style="color:#0c243c;"><div class="ex" align="center"><i
+        <hr><a href="{{ route('user.wallet-exchange') }}" class="user-sidebar-btn" style="color:#0c243c;"><div class="ex" align="center"><i
                     class="anticon anticon-credit-card"></i> {{ __('WALLET EXCHANGE') }}</div></a><hr>
         <div class="actions">
             <a href="{{ route('user.deposit.amount') }}" class="user-sidebar-btn"><i
