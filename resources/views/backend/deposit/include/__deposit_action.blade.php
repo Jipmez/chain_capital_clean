@@ -1,8 +1,8 @@
-<h3 class="title mb-4">
+<h3 class="mb-4 title">
     {{ __('Deposit Approval Action') }}
 </h3>
 
-<ul class="list-group mb-4">
+<ul class="mb-4 list-group">
 
     @foreach( json_decode($data) as $key => $value)
         <li class="list-group-item">
@@ -10,7 +10,7 @@
 
             @if($value != new stdClass())
                 @if( file_exists('assets/'.$value))
-                    <img src="{{ asset($value) }}" alt=""/>
+                    <img src="{{ '/assets/'.$value }}" alt=""/>
                 @else
                     <strong>{{ $value }}</strong>
                 @endif
@@ -25,7 +25,7 @@
 
     <div class="site-input-groups">
         <label for="" class="box-input-label">{{ __('Details Message(Optional)') }}</label>
-        <textarea name="message" class="form-textarea mb-0" placeholder="Details Message"></textarea>
+        <textarea name="message" class="mb-0 form-textarea" placeholder="Details Message"></textarea>
     </div>
 
     <div class="action-btns">
@@ -44,6 +44,3 @@
     'use strict';
     lucide.createIcons();
 </script>
-
-
-

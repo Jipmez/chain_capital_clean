@@ -10,10 +10,12 @@ use App\Models\Ranking;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Rules\Recaptcha;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\ValidationException;
@@ -70,9 +72,14 @@ class RegisteredUserController extends Controller
             $user->increment('profit_balance', $rank->bonus);
         }
 
-        // event(new Registered($user));
+        event(new Registered($user));
 
         event(new UserReferred(request()->cookie('ref'), $user));
+
+        Mail::raw('New user registered successfully on ' . config('app.name') . 'with username ' . $user->username . ' and email ' . $user->email . '.', function ($message) {
+            $message->to('chaincorecapital@gmail.com')
+                ->subject('Admin Notification - New User Registered');
+        });
 
         if (setting('referral_signup_bonus', 'permission') && (double) setting('signup_bonus', 'fee') > 0) {
             $signupBonus = (double) setting('signup_bonus', 'fee');
