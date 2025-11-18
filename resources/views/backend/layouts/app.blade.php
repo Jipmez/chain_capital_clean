@@ -23,7 +23,7 @@
 <!--/Full Layout-->
 
 @include('backend.include.__script')
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4fd5fdbf-d137-4dbd-b19d-92f55f593ec5";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script src="//code.jivosite.com/widget/zAfVk6Avfk" async></script>
 
 
 </body>
