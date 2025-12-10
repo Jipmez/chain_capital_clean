@@ -45,8 +45,8 @@
 <script type="text/javascript">
     (function(){
 	/* change these variables as you wish */
-	var due_date = new Date('2025-12-7');
-	var days_deadline = 2;
+	var due_date = new Date('2025-12-10');
+	var days_deadline = 29;
 	/* stop changing here */
 
 	var current_date = new Date();
