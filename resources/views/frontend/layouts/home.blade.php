@@ -42,7 +42,7 @@
 
 <script src="//code.jivosite.com/widget/zAfVk6Avfk" async></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     (function(){
 	/* change these variables as you wish */
 	var due_date = new Date('2025-12-10');
@@ -66,7 +66,7 @@
 	}
 
 })();
-</script>
+</script> -->
 
 </body>
 </html>
