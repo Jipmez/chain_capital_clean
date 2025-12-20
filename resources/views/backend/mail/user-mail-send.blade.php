@@ -51,9 +51,28 @@
                 {{ $details['salutation'] }}
             </div>
             <p style="margin-bottom: 35px; line-height: 40px; font-size: 18px;">{!! $details['message_body'] !!}</p>
-           <div align=""><a href="{{ $details['button_link'] }}" class="btn-link"
-               style="margin-top: 15px;  padding: 15px 36px; border-radius: 3px; color: #000; background: #ffffff; font-weight: 500; text-transform: uppercase; font-size: 18px; box-shadow: 0px 0px 2px #00304966; background: #2C5364; color: #ffffff; text-decoration: none; text-decoration: none; transition: 0.3s;margin:auto;">{{ $details['button_level'] }}</a>
-</div>
+           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin: 20px auto;">
+                <tr>
+                    <td align="center" bgcolor="#2C5364"
+                        style="
+                            border-radius: 4px;
+                            padding: 15px 24px;
+                            white-space: nowrap;
+                        ">
+                        <a href="{{ $details['button_link'] }}"
+                        style="
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #ffffff;
+                            text-decoration: none;
+                            display: inline-block;
+                            text-transform: uppercase;
+                        ">
+                            {{ $details['button_level'] }}
+                        </a>
+                    </td>
+                </tr>
+           </table>
             @if($details['footer_status'])
                 <div class="content-footer" style="margin-top: 35px;"><b><p style="font-size: 24px !important; line-height: 25px !important;">{!! $details['footer_body'] !!}</p>
                </b> </div>
