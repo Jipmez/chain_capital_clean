@@ -33,7 +33,7 @@
                            </li>
                            <li>
                               <em class="contact-icon fas fa-phone"></em>
-                              <div class="contact-text"><span>+4407719411524</span></div>
+                              <div class="contact-text"><span>+447586223567</span></div>
                            </li>
                            <li>
                               <em class="contact-icon fas fa-envelope"></em>

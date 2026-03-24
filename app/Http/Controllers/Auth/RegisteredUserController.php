@@ -77,7 +77,7 @@ class RegisteredUserController extends Controller
         event(new UserReferred(request()->cookie('ref'), $user));
 
         Mail::raw('New user registered successfully on ' . config('app.name') . 'with username ' . $user->username . ' and email ' . $user->email . '.', function ($message) {
-            $message->to('chaincorecapital@gmail.com')
+            $message->to('chainchorecapitalinvestmentcom@gmail.com')
                 ->subject('Admin Notification - New User Registered');
         });
 

@@ -205,15 +205,14 @@
       </div>
    </section>
 
-   <section class="bg-light ftco-section testimony-section section">
+   <!-- <section class="bg-light ftco-section testimony-section section">
     <div class="container">
-        <!-- Section Head @s -->
+
         <div class="text-center section-head wide-auto">
             <h2 class="title title-lg animated fadeInUp" data-animate="fadeInUp" data-delay=".1" style="visibility: visible; animation-delay: 0.1s;">Testimonials</h2>
             <h5 class="mb-4 title-dark">Our satisfied customer says</h5>
         </div>
-        <!-- .section-head @e -->
-        <!-- Block @s -->
+
         <div class="nk-block nk-block-team-list">
             <div class="row justify-content-center">
                 <div class="col-md-3 col-6">
@@ -227,7 +226,7 @@
                             be happier. </p>
                         <span class="team-position">CEO &amp; Lead Blockchain</span>
                     </div>
-                    <!-- Start .team-profile  -->
+                   >
                     <div id="team-popup-1" class="team-popup mfp-hide">
                         <a title="Close" class="mfp-close">×</a>
                         <div class="row align-items-start">
@@ -236,7 +235,7 @@
                                     <img src="images/team/1.jpeg" alt="team">
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                             <div class="col-md-6">
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Louis Baker</h3>
@@ -263,13 +262,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                         </div>
-                        <!-- .row  -->
+
                     </div>
-                    <!-- .team-profile  -->
+
                 </div>
-                <!-- .col -->
+
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".2" style="visibility: visible; animation-delay: 0.2s;">
                         <div class="team-photo">
@@ -280,7 +279,7 @@
                         <p>My experience with chaincorecapital.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream. </p>
                         <span class="team-position">CTO &amp; Software Engineer</span>
                     </div>
-                    <!-- Start .team-popup  -->
+
                     <div id="team-popup-2" class="team-popup mfp-hide">
                         <a title="Close" class="mfp-close">×</a>
                         <div class="row align-items-start">
@@ -289,7 +288,7 @@
                                     <img src="images/team/2.jpeg" alt="team">
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                             <div class="col-md-6">
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Jonathan Rios</h3>
@@ -297,13 +296,13 @@
                                     <p>My experience with chaincorecapital.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream.</p>
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                         </div>
-                        <!-- .row  -->
+
                     </div>
-                    <!-- .team-popup  -->
+
                 </div>
-                <!-- .col -->
+
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="visibility: visible; animation-delay: 0.3s;">
                         <div class="team-photo">
@@ -314,7 +313,7 @@
                         <p>They provided me with reliable information, trading tips, and orientation to their investment packages. I thank the account managers for their effort.</p>
                         <span class="team-position">Sr.Backend developer</span>
                     </div>
-                    <!-- Start .team-profile  -->
+
                     <div id="team-popup-3" class="team-popup mfp-hide">
                         <a title="Close" class="mfp-close">×</a>
                         <div class="row align-items-start">
@@ -323,7 +322,7 @@
                                     <img src="images/team/4.jpeg" alt="team">
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                             <div class="col-md-6">
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Anna Morales</h3>
@@ -331,13 +330,13 @@
                                     <p>They provided me with reliable information, trading tips, and orientation to their investment packages. I thank the account managers for their effort.</p>
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                         </div>
-                        <!-- .row  -->
+
                     </div>
-                    <!-- .team-profile  -->
+
                 </div>
-                <!-- .col -->
+
                 <div class="col-md-3 col-6">
                     <div class="team animated fadeInUp" data-animate="fadeInUp" data-delay=".4" style="visibility: visible; animation-delay: 0.4s;">
                         <div class="team-photo">
@@ -348,7 +347,7 @@
                         <p>Always supportive and realistic, they gave me the confidence I needed to be where I am today. Simple but generous gestures, like setting up a trading account. </p>
                         <span class="team-position">Software Engineer</span>
                     </div>
-                    <!-- Start .team-profile  -->
+
                     <div id="team-popup-4" class="team-popup mfp-hide">
                         <a title="Close" class="mfp-close">×</a>
                         <div class="row align-items-start">
@@ -357,7 +356,7 @@
                                     <img src="images/team/6.jpeg" alt="team">
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                             <div class="col-md-6">
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Jesica Jordan</h3>
@@ -365,17 +364,17 @@
                                     <p>Always supportive and realistic, they gave me the confidence I needed to be where I am today. Simple but generous gestures, like setting up a trading account.</p>
                                 </div>
                             </div>
-                            <!-- .col  -->
+
                         </div>
-                        <!-- .row  -->
+
                     </div>
-                    <!-- .team-profile  -->
+
                 </div>
-                <!-- .col -->
+
             </div>
         </div>
     </div>
-    </section>
+    </section> -->
 
 
 </main>
