@@ -1,7 +1,3 @@
-@php
-    $location = $location ?? null;
-@endphp
-
 @extends('frontend.layouts.auth')
 
 @section('title')
@@ -100,8 +96,7 @@
 
                                         <select name="country" id="countrySelect" class="site-nice-select">
                                             @foreach( getCountries() as $country)
-                                                <option @if(optional($location)->country_code == $country['code']) selected
-                                                        @endif value="{{ $country['name'].':'.$country['dial_code'] }}">
+                                                <option value="{{ $country['name'].':'.$country['dial_code'] }}">
                                                     {{ $country['name']  }}
                                                 </option>
                                             @endforeach
