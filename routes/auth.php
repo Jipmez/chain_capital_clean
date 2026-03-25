@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 //================================ User Auth Section ================================
 
 Route::middleware('guest')->group(function () {
-    Route::get('register', [RegisteredUserController::class, 'create'])
-        ->name('register');
+    Route::get('/register', function () {
+     return view('frontend.auth.register');
+})->name('register');
+    // Route::get('register', [RegisteredUserController::class, 'create'])
+    //     ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 

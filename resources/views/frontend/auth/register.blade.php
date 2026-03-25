@@ -1,3 +1,7 @@
+@php
+    $location = $location ?? null;
+@endphp
+
 @extends('frontend.layouts.auth')
 
 @section('title')
@@ -96,7 +100,7 @@
 
                                         <select name="country" id="countrySelect" class="site-nice-select">
                                             @foreach( getCountries() as $country)
-                                                <option @if( $location->country_code == $country['code']) selected
+                                                <option @if(optional($location)->country_code == $country['code']) selected
                                                         @endif value="{{ $country['name'].':'.$country['dial_code'] }}">
                                                     {{ $country['name']  }}
                                                 </option>
@@ -111,7 +115,7 @@
                                         <label class="box-label" for="username">{{ __('Phone Number') }}<span
                                                 class="required-field">*</span></label>
                                         <div class="input-group joint-input"><span class="input-group-text"
-                                                                                   id="dial-code">{{ getLocation()->dial_code }}</span>
+                                                                                   id="dial-code">{{ optional(getLocation())->dial_code ?? '' }}</span>
                                             <input
                                                 type="text"
                                                 class="form-control"
@@ -155,15 +159,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-                                    <div class="single-field">
-                                        @if($googleReCaptcha)
-                                            <div class="g-recaptcha" id="feedback-recaptcha"
-                                                 data-sitekey="{{ json_decode($googleReCaptcha->data,true)['google_recaptcha_key'] }}">
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
+
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-12">
                                     <div class="single-field">
                                         <input
@@ -200,16 +196,4 @@
     </section>
     <!-- Login Section End -->
 @endsection
-@section('script')
-    @if($googleReCaptcha)
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    @endif
-    <script>
-        $('#countrySelect').on('change', function (e) {
-            "use strict";
-            e.preventDefault();
-            var country = $(this).val();
-            $('#dial-code').html(country.split(":")[1])
-        })
-    </script>
-@endsection
+

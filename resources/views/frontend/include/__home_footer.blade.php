@@ -28,7 +28,7 @@
                               <em class="contact-icon fas fa-building"></em>
                               <div class="contact-text">
                                  <h6>ICO Crypto</h6>
-                                 <span>728 Dooley Branch <br> Beckershire, LA 63598</span>
+                                 <span>6th Floor, 1 London Wall, London,<br> EC2Y 5EB, United Kingdom.</span>
                               </div>
                            </li>
                            <li>
