@@ -4,7 +4,7 @@
             <img class="logo-unfold" src="/images/chain_logo.png" width="120px" height="120px" alt="Logo"/>
             <img class="logo-fold" src="/images/chain_logo.png" width="120px" height="120px" alt="Logo"/>
         </a>
-        ChainCore Capital
+        Archaxbit Capital
     </div>
     <div class="nav-wrap">
         <div class="nav-left">

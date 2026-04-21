@@ -37,7 +37,7 @@
                            </li>
                            <li>
                               <em class="contact-icon fas fa-envelope"></em>
-                              <div class="contact-text"><span>support@chaincorecapital.com</span></div>
+                              <div class="contact-text"><span>support@archaxbit.com</span></div>
                            </li>
                            <li>
                               <em class="contact-icon fas fa-paper-plane"></em>
@@ -110,11 +110,11 @@
                </div>
                <div class="col-lg-6 order-lg-first">
                   <div class="wgs wgs-text animated fadeInUp" data-animate="fadeInUp" data-delay=".1" style="visibility: visible; animation-delay: 0.1s;">
-                    <div id="google_translate_element"></div>
+                     <div id="google_translate_element"></div>
                      <div class="wgs-body">
 
                         <a href="./" class="wgs-logo"><img src="images/chain_logo.png" style="width: 150px; height: 150px;" alt="logo"></a>
-                        <p>Copyright © 2024 ChainCore Capital. <br>ABN: 2018AD947. All rights reserved. </p>
+                        <p>Copyright © 2024 Archaxbit Capital. <br>ABN: 2018AD947. All rights reserved. </p>
 
                      </div>
                   </div>

@@ -1,14 +1,15 @@
 @extends('frontend.layouts.home')
 @section('title')
-    {{ __('Home') }}
+{{ __('Home') }}
 @endsection
 @section('content')
 <main class="nk-pages">
-    <!-- <section class="overflow-hidden text-center section no-pd over-up">
-        <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">ChainCore Capital</a></div></div>
+   <!-- <section class="overflow-hidden text-center section no-pd over-up">
+        <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Archaxbit Capital</a></div></div>
     </section> -->
 
-    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+   <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+   <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
    <section class="bg-white section section-features" id="why">
       <div class="container">
          <div class="nk-block nk-block-features-s2">
@@ -26,7 +27,7 @@
                         <div class="feature-icon dot"><em class="icon ikon ikon-shiled-alt"></em></div>
                         <div class="feature-text">
                            <h5 class="title title-sm">Experienced Trading & Analysis Team</h5>
-                           <p>Chaincore team consists of most experienced experts in Forex/crypto Trading and analysis. 70%+ is our trading signal's success rate , so you can earn and grow with us.</p>
+                           <p>Archaxbit team consists of most experienced experts in Forex/crypto Trading and analysis. 70%+ is our trading signal's success rate , so you can earn and grow with us.</p>
                         </div>
                      </div>
                      <div class="feature feature-s2 animated" data-animate="fadeInUp" data-delay=".5">
@@ -40,7 +41,7 @@
                         <div class="feature-icon dot"><em class="icon ikon ikon-data-server"></em></div>
                         <div class="feature-text">
                            <h5 class="title title-sm">Data security</h5>
-                           <p>Chaincore is committed to providing clients a secure environment to invest. Data protection and safekeeping of clients assets are our priority.</p>
+                           <p>Archaxbit is committed to providing clients a secure environment to invest. Data protection and safekeeping of clients assets are our priority.</p>
                         </div>
                      </div>
                   </div>
@@ -74,7 +75,7 @@
                      <div class="feature boxed bg-white-10">
                         <div class="feature-text">
                            <h4 class="title title-md">Innovative platform</h4>
-                           <p>At Chaincorecapital, innovation is the standard. Our investment platform is at the forefront of the industry but we are not content to stop improving. We are continuously expanding our services.</p>
+                           <p>At archaxbit, innovation is the standard. Our investment platform is at the forefront of the industry but we are not content to stop improving. We are continuously expanding our services.</p>
                         </div>
                      </div>
                      <div class="feature boxed bg-white-2">
@@ -100,7 +101,7 @@
          <div class="text-center section-head wide-auto-sm">
             <h2 class="title animated" data-animate="fadeInUp" data-delay=".1">Solutions</h2>
             <p class="animated" data-animate="fadeInUp" data-delay=".2">Accelerating positive change.
-            Our purpose is to provide excellent investment performance to our clients through active management.</p>
+               Our purpose is to provide excellent investment performance to our clients through active management.</p>
          </div>
          <div class="nk-block nk-block-features-s3">
             <div class="row gutter-vr-40px justify-content-center">
@@ -145,25 +146,28 @@
       </div>
    </section>
 
-  <section class="section bg-light section-document" id="documents" >
-   <div class="container">
-      <!-- <div class="text-center section-head wide-auto">
+   <section class="section bg-light section-document" id="documents">
+      <div class="container">
+         <!-- <div class="text-center section-head wide-auto">
          <h2 class="title animated fadeInUp" data-animate="fadeInUp" data-delay=".1" style="visibility: visible; animation-delay: 0.1s;">ICOX Tokens</h2>
          <p class="animated fadeInUp" data-animate="fadeInUp" data-delay=".2" style="visibility: visible; animation-delay: 0.2s;">Our Tokens with a realworld use case created on the blockchain network.</p>
       </div> -->
-      <div class="nk-block nk-block-document">
-         <div class="row justify-content-center">
-            <div class="col-lg-10">
-               <div class="card card-lg animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);">
-                  <div class="row align-items-center">
-                     <div class="col-md-6">
-                        <div class="px-4 pb-4 nk-block-img pb-md-0"><img src="images/doc-a.png" alt="doc"></div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="nk-block-text">
-                           <h4 class="text-white title title-md">Read the Whitepaper</h4>
-                           <p class="text-white">Our main goal is to provide added value by developing affordable, custom-made financial services for investors worldwide. By combining technology and financial knowledge, chaincorecapital.com creates high-quality and cost-effective financial services for everyone.</p>
-                          <ul class="btn-grp gutter-30px gutter-vr-20px"><li><a href="images/cert.pdf" target="_blank" class="btn btn-grad">Download WHite paper</a></li></ul>
+         <div class="nk-block nk-block-document">
+            <div class="row justify-content-center">
+               <div class="col-lg-10">
+                  <div class="card card-lg animated fadeInUp" data-animate="fadeInUp" data-delay=".3" style="background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);">
+                     <div class="row align-items-center">
+                        <div class="col-md-6">
+                           <div class="px-4 pb-4 nk-block-img pb-md-0"><img src="images/doc-a.png" alt="doc"></div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="nk-block-text">
+                              <h4 class="text-white title title-md">Read the Whitepaper</h4>
+                              <p class="text-white">Our main goal is to provide added value by developing affordable, custom-made financial services for investors worldwide. By combining technology and financial knowledge, archaxbit.com creates high-quality and cost-effective financial services for everyone.</p>
+                              <ul class="btn-grp gutter-30px gutter-vr-20px">
+                                 <li><a href="images/cert.pdf" target="_blank" class="btn btn-grad">Download WHite paper</a></li>
+                              </ul>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -171,8 +175,7 @@
             </div>
          </div>
       </div>
-   </div>
-</section>
+   </section>
 
    <section class="section tc-light bg-theme-grad" id="admin-intro">
       <div class="container">
@@ -180,10 +183,11 @@
             <div class="row align-items-center">
                <div class="col-lg-7 order-lg-last">
                   <!-- <div class="pb-4 nk-block-img edge-r1 pb-lg-0 animated" data-animate="fadeInUp" data-delay=".1">
-                    <div style="height:433px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Chaincore Capital</a></div></div>
+                    <div style="height:433px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Archaxbit Capital</a></div></div>
                   </div> -->
 
-                  <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+                  <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+                  <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
                </div>
                <div class="col-lg-5">
                   <div class="nk-block-text">
@@ -240,7 +244,7 @@
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Louis Baker</h3>
                                     <p class="team-position">CEO &amp; Lead Blockchain </p>
-                                    <p>chaincorecapital.com emphasis on finding a perfect trading strategy helped so much in making investment success as seamless as possible. I couldn’t
+                                    <p>archaxbit.com emphasis on finding a perfect trading strategy helped so much in making investment success as seamless as possible. I couldn’t
                                         be happier.</p>
                                     <div class="progress-list">
                                         <div class="progress-wrap">
@@ -276,7 +280,7 @@
                             <a href="#team-popup-2" class="team-show content-popup"></a>
                         </div>
                         <h5 class="team-name title title-sm">Jonathan Rios</h5>
-                        <p>My experience with chaincorecapital.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream. </p>
+                        <p>My experience with archaxbit.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream. </p>
                         <span class="team-position">CTO &amp; Software Engineer</span>
                     </div>
 
@@ -293,7 +297,7 @@
                                 <div class="team-popup-info pl-md-3">
                                     <h3 class="pt-4 team-name title title-lg">Jonathan Rios</h3>
                                     <p class="team-position">CTO &amp; Software Engineer</p>
-                                    <p>My experience with chaincorecapital.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream.</p>
+                                    <p>My experience with archaxbit.com was life-changing. From the very beginning the technical team were entirely committed to my financial dream.</p>
                                 </div>
                             </div>
 
