@@ -1,50 +1,75 @@
-<!DOCTYPE html><head><meta name="viewport" content="width=1100px, initial-scale=1, user-scalable=yes" /></head>
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=1100px, initial-scale=1, user-scalable=yes" />
+</head>
 <html lang="en">
 @include('frontend.include.__head')
+
 <body class="{{ session()->get('site-color-mode') ?? 'dark-theme' }}">
-<x-notify::notify />
-<!--Full Layout-->
-<div class="panel-layout">
-    <!--Header-->
-    @include('frontend.include.__user_header')
-    <!--/Header-->
+    <x-notify::notify />
+    <!--Full Layout-->
+    <div class="panel-layout">
+        <!--Header-->
+        @include('frontend.include.__user_header')
+        <!--/Header-->
 
-    <!--Side Nav-->
-    @include('frontend.include.__user_side_nav')
-    <!--/Side Nav-->
+        <!--Side Nav-->
+        @include('frontend.include.__user_side_nav')
+        <!--/Side Nav-->
 
-    <div class="page-container">
-        <div class="main-content">
-            <div class="section-gap">
-                <div class="container-fluid">
-                    @if(setting('kyc_verification','permission'))
+        <div class="page-container">
+            <div class="main-content">
+                <div class="section-gap">
+                    <div class="container-fluid">
+                        @if(setting('kyc_verification','permission'))
                         {{--Kyc Info --}}
                         @include('frontend.user.include.__kyc_info')
-                    @endif
-                    <!--Page Content-->
-                    @yield('content')
-                    <!--Page Content-->
+                        @endif
+                        <!--Page Content-->
+                        @yield('content')
+                        <!--Page Content-->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- Automatic Popup -->
-    @if(Session::get('signup_bonus'))
+        <!-- Automatic Popup -->
+        @if(Session::get('signup_bonus'))
         @include('frontend.user.include.__signup_bonus')
-    @endif
+        @endif
 
-    <!-- /Automatic Popup End -->
-</div>
-<!--/Full Layout-->
+        <!-- /Automatic Popup End -->
+    </div>
+    <!--/Full Layout-->
 
-@include('frontend.include.__script')
-
-
+    @include('frontend.include.__script')
 
 
-<script src="//code.jivosite.com/widget/zAfVk6Avfk" async></script>
+
+
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '9642f2e044606cc0fdb502e013d720da8ad3b830';
+        window.smartsupp || (function(d) {
+            var s, c, o = smartsupp = function() {
+                o._.push(arguments)
+            };
+            o._ = [];
+            s = d.getElementsByTagName('script')[0];
+            c = d.createElement('script');
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?';
+            s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+    <noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
+
 
 </body>
+
 </html>
