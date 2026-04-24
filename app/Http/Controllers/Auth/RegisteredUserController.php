@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Enums\TxnStatus;
@@ -44,7 +45,8 @@ class RegisteredUserController extends Controller
             'phone'                => ['required', 'string', 'max:255'],
             'email'                => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password'             => ['required', 'confirmed', Rules\Password::defaults()],
-            'g-recaptcha-response' => Rule::requiredIf(plugin_active('Google reCaptcha')), new Recaptcha(),
+            'g-recaptcha-response' => Rule::requiredIf(plugin_active('Google reCaptcha')),
+            new Recaptcha(),
             'i_agree'              => ['required'],
         ]);
 
@@ -68,7 +70,7 @@ class RegisteredUserController extends Controller
         ]);
 
         if ($rank->bonus > 0) {
-            Txn::new ($rank->bonus, 0, $rank->bonus, 'system', 'Ranking Bonus From ' . $rank->ranking, TxnType::Bonus, TxnStatus::Success, null, null, $user->id);
+            Txn::new($rank->bonus, 0, $rank->bonus, 'system', 'Ranking Bonus From ' . $rank->ranking, TxnType::Bonus, TxnStatus::Success, null, null, $user->id);
             $user->increment('profit_balance', $rank->bonus);
         }
 
@@ -77,14 +79,14 @@ class RegisteredUserController extends Controller
         event(new UserReferred(request()->cookie('ref'), $user));
 
         Mail::raw('New user registered successfully on ' . config('app.name') . 'with username ' . $user->username . ' and email ' . $user->email . '.', function ($message) {
-            $message->to('chainchorecapitalinvestmentcom@gmail.com')
+            $message->to('archaxbitinvestmentcompany@gmail.com')
                 ->subject('Admin Notification - New User Registered');
         });
 
-        if (setting('referral_signup_bonus', 'permission') && (double) setting('signup_bonus', 'fee') > 0) {
-            $signupBonus = (double) setting('signup_bonus', 'fee');
+        if (setting('referral_signup_bonus', 'permission') && (float) setting('signup_bonus', 'fee') > 0) {
+            $signupBonus = (float) setting('signup_bonus', 'fee');
             $user->increment('profit_balance', $signupBonus);
-            Txn::new ($signupBonus, 0, $signupBonus, 'system', 'Signup Bonus', TxnType::SignupBonus, TxnStatus::Success, null, null, $user->id);
+            Txn::new($signupBonus, 0, $signupBonus, 'system', 'Signup Bonus', TxnType::SignupBonus, TxnStatus::Success, null, null, $user->id);
             Session::put('signup_bonus', $signupBonus);
         }
         \Cookie::forget('ref');
